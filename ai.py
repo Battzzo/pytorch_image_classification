@@ -148,7 +148,7 @@ def saveVariableToFile(variable, fileName, directory):
     with open(directory+"/"+fileName+".txt","w") as file:
         file.write(str(variable))
         
-#test mode d is for a detaild loss analysis, for not detail anything else 
+
 def main(epochs, epochSize, lr, modelName, testMode):
     accuracy = []
     for x in range(epochs):
@@ -161,4 +161,6 @@ def main(epochs, epochSize, lr, modelName, testMode):
 model = Net()
 lossList = []
 model = loadModel("LungNet V.1.0",5,1000)
+
+#test mode d is for a detaild loss analysis, for not detail anything else 
 main(100, 1000, 0.00001, "lungNet.V.1.1", "d")
